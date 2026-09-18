@@ -6,6 +6,8 @@ export type LeadPayload = {
   fullName: string;
   email: string;
   phone: string;
+  /** Free-text enquiry body — always sent to n8n as `message`. */
+  message?: string;
 };
 
 export function getLeadWebhookUrl(): string | undefined {
@@ -23,6 +25,7 @@ export function buildLeadWebhookBody(payload: LeadPayload) {
     "Phone Number": payload.phone ?? "",
     "Brand name": BRAND_NAME,
     domain: getSiteDomain(),
+    message: payload.message ?? "",
   };
 }
 

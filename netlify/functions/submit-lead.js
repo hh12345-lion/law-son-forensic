@@ -160,6 +160,24 @@ exports.handler = async function handler(event) {
   const fullName = typeof body.fullName === "string" ? body.fullName.trim() : "";
   const email = typeof body.email === "string" ? body.email.trim() : "";
   const phone = typeof body.phone === "string" ? body.phone.trim() : "";
+  const message = (() => {
+    const keys = [
+      "message",
+      "Message",
+      "description",
+      "enquiry",
+      "details",
+      "summary",
+      "notes",
+      "matter",
+    ];
+    for (const key of keys) {
+      if (body[key] != null && String(body[key]).trim()) {
+        return String(body[key]).trim();
+      }
+    }
+    return "";
+  })();
 
   if (!fullName || !email) {
     return {
@@ -179,6 +197,7 @@ exports.handler = async function handler(event) {
         "Phone Number": phone,
         "Brand name": BRAND_NAME,
         domain: getSiteDomain(),
+        message,
       };
       const response = await fetch(webhookUrl, {
         method: "POST",
