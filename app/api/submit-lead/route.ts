@@ -19,6 +19,13 @@ export async function POST(request: Request) {
       practiceArea?: string;
       deadline?: string;
       message?: string;
+      Message?: string;
+      description?: string;
+      enquiry?: string;
+      details?: string;
+      summary?: string;
+      notes?: string;
+      matter?: string;
       referral?: string;
     };
 
@@ -30,7 +37,18 @@ export async function POST(request: Request) {
     const instructionType = sanitize(body.instructionType ?? "", 100);
     const practiceArea = sanitize(body.practiceArea ?? "", 100);
     const deadline = sanitize(body.deadline ?? "", 50);
-    const message = sanitize(body.message ?? "", 4000);
+    const message = sanitize(
+      body.message ??
+        body.Message ??
+        body.description ??
+        body.enquiry ??
+        body.details ??
+        body.summary ??
+        body.notes ??
+        body.matter ??
+        "",
+      4000
+    );
     const referral = sanitize(body.referral ?? "", 100);
 
     if (!fullName || !email) {
@@ -71,7 +89,12 @@ export async function POST(request: Request) {
     let webhookOk = false;
     if (webhookUrl) {
       try {
-        const result = await notifyLeadWebhook({ fullName, email, phone });
+        const result = await notifyLeadWebhook({
+          fullName,
+          email,
+          phone,
+          message,
+        });
         webhookOk = result.ok;
         if (!webhookOk) {
           console.error("[submit-lead] webhook failed — continuing with Sheets");
