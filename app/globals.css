@@ -61,6 +61,32 @@
   }
 }
 
+.prose-content a {
+  color: theme("colors.copper");
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose-content a:hover {
+  color: theme("colors.ink");
+}
+
+.prose-content ol {
+  list-style-type: decimal;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.prose-content ol li {
+  margin-bottom: 0.5rem;
+}
+
+.prose-content strong {
+  color: theme("colors.ink");
+  font-weight: 600;
+}
+
 @layer utilities {
   .animate-slide-up {
     animation: slideUp 0.35s ease-out forwards;

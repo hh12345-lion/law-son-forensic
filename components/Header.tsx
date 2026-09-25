@@ -12,6 +12,7 @@ const primaryNavLinks = [
   { href: "/about", label: "About" },
   { href: "/case-studies", label: "Case Studies" },
   { href: "/insights", label: "Insights" },
+  { href: "/blog", label: "Blog" },
 ];
 
 const practiceRail = [
@@ -62,6 +63,7 @@ const mobileGroups = [
     links: [
       { href: "/case-studies", label: "Case Studies" },
       { href: "/insights", label: "Insights" },
+      { href: "/blog", label: "Blog" },
       { href: "/faq", label: "FAQ" },
     ],
   },

@@ -2,163 +2,175 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.lawsonforensic.com</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://www.lawsonforensic.com/about</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
+    <loc>https://www.lawsonforensic.com/blog</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.lawsonforensic.com/blog/common-valuation-assumptions-to-examine-shareholder-partnership-disputes</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://www.lawsonforensic.com/case-studies</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.87</priority>
   </url>
   <url>
     <loc>https://www.lawsonforensic.com/contact</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
   </url>
   <url>
     <loc>https://www.lawsonforensic.com/faq</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.lawsonforensic.com/how-we-work</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.87</priority>
   </url>
   <url>
     <loc>https://www.lawsonforensic.com/insights</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.lawsonforensic.com/insights/business-valuation-divorce-guide</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.lawsonforensic.com/insights/choosing-single-joint-expert</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.lawsonforensic.com/insights/instructing-forensic-accountant-guide</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.lawsonforensic.com/insights/poca-benefit-calculation-guide</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.lawsonforensic.com/practice-areas</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.88</priority>
   </url>
   <url>
     <loc>https://www.lawsonforensic.com/practice-areas/commercial-disputes</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.lawsonforensic.com/practice-areas/family-proceedings</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.lawsonforensic.com/practice-areas/fraud-financial-crime</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.lawsonforensic.com/practice-areas/insolvency-administration</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.lawsonforensic.com/practice-areas/personal-injury-clinical-negligence</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.lawsonforensic.com/practice-areas/regulatory-proceedings</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.lawsonforensic.com/practice-areas/shareholder-disputes</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.lawsonforensic.com/qualifications-accreditations</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.87</priority>
   </url>
   <url>
     <loc>https://www.lawsonforensic.com/services</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://www.lawsonforensic.com/services/asset-tracing</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://www.lawsonforensic.com/services/business-valuation</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://www.lawsonforensic.com/services/expert-witness</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://www.lawsonforensic.com/services/family-matrimonial</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://www.lawsonforensic.com/services/fraud-investigation</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://www.lawsonforensic.com/services/loss-quantification</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>

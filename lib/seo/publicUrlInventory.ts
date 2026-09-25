@@ -2,6 +2,7 @@ import { SITE_URL } from "../site";
 import { services, servicePath } from "../data/services";
 import { practiceAreas } from "../data/practice-areas";
 import { insights } from "../data/insights";
+import { getBlogSlugs } from "../blog";
 
 /** Paths indexed in sitemap (no trailing slash). */
 export const APP_STATIC_PATHS = [
@@ -17,6 +18,8 @@ export const APP_STATIC_PATHS = [
   "/faq",
   "/insights",
   ...insights.map((i) => `/insights/${i.slug}`),
+  "/blog",
+  ...getBlogSlugs().map((slug) => `/blog/${slug}`),
   "/contact",
 ] as const;
 
@@ -57,8 +60,8 @@ export function getSitemapPriority(path: string): number {
     path === "/qualifications-accreditations"
   )
     return 0.87;
-  if (path === "/faq" || path === "/insights") return 0.85;
-  if (path.startsWith("/insights/")) return 0.8;
+  if (path === "/faq" || path === "/insights" || path === "/blog") return 0.85;
+  if (path.startsWith("/insights/") || path.startsWith("/blog/")) return 0.8;
   if (path === "/cookies" || path === "/privacy" || path === "/terms")
     return 0.3;
   if (path === "/contact") return 0.5;
@@ -68,7 +71,7 @@ export function getSitemapPriority(path: string): number {
 export function getSitemapChangeFreq(
   path: string
 ): "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never" {
-  if (path === "/" || path === "/insights") return "weekly";
+  if (path === "/" || path === "/insights" || path === "/blog") return "weekly";
   if (path === "/privacy" || path === "/terms" || path === "/cookies")
     return "yearly";
   return "monthly";

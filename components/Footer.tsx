@@ -11,6 +11,7 @@ const firmLinks = [
   { href: "/qualifications-accreditations", label: "Qualifications" },
   { href: "/case-studies", label: "Case Studies" },
   { href: "/insights", label: "Insights" },
+  { href: "/blog", label: "Blog" },
   { href: "/faq", label: "FAQ" },
 ];
 
