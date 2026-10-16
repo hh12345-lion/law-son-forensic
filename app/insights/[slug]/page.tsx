@@ -8,13 +8,10 @@ import { Section, Prose } from "@/components/Section";
 import { CTASection } from "@/components/CTASection";
 import { getInsightRelatedLinks } from "@/lib/seo/internalLinks";
 import { InternalLinksSection } from "@/components/seo/InternalLinksSection";
-import { insights, getInsight } from "@/lib/data/insights";
+import { getInsight } from "@/lib/data/insights";
+import { photoFor } from "@/lib/page-photos";
 
 type Props = { params: Promise<{ slug: string }> };
-
-export async function generateStaticParams() {
-  return insights.map((i) => ({ slug: i.slug }));
-}
 
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
@@ -43,6 +40,7 @@ export default async function InsightArticlePage({ params }: Props) {
         ])}
       />
       <PageHero
+        photo={photoFor(`/insights/${slug}`)}
         title={article.title}
         breadcrumbs={[
           { label: "Home", href: "/" },

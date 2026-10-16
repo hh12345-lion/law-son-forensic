@@ -7,7 +7,7 @@ const variants: Record<Variant, string> = {
   primary:
     "border-2 border-copper bg-copper text-white hover:bg-ink hover:border-ink focus-visible:ring-copper",
   secondary:
-    "border-2 border-white/30 bg-transparent text-white hover:border-copper hover:text-copper focus-visible:ring-copper",
+    "border-2 border-ink/25 bg-transparent text-ink hover:border-copper hover:text-copper focus-visible:ring-copper",
   outline:
     "border-2 border-copper bg-transparent text-ink hover:bg-copper hover:text-white focus-visible:ring-copper",
 };
@@ -30,7 +30,7 @@ export function Button({
   type = "button",
 }: ButtonProps) {
   const base =
-    "inline-flex min-h-touch min-w-touch items-center justify-center rounded-card px-5 py-3 text-center text-sm font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 sm:px-6";
+    "inline-flex min-h-touch min-w-touch items-center justify-center rounded-tr-2xl px-5 py-3 text-center text-sm font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 sm:px-6";
 
   const classes = `${base} ${variants[variant]} ${className}`;
 

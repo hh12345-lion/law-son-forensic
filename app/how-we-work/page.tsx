@@ -4,6 +4,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { CTASection } from "@/components/CTASection";
+import { photoFor } from "@/lib/page-photos";
 
 export const metadata = buildMetadata({
   title: "How We Work | The Lawson Forensic Approach",
@@ -37,8 +38,8 @@ const principles = [
 
 const steps = [
   { step: "1", title: "Initial contact", text: "Discuss the matter, confirm scope and availability, check conflicts. Same day response." },
-  { step: "2", title: "Conflicts check", text: "Full conflicts check against existing clients and instructions. Completed within 24 hours." },
-  { step: "3", title: "Letter of instruction", text: "Review the instruction letter, raise queries if scope needs clarification. Confirm acceptance within 2 working days." },
+  { step: "2", title: "Conflicts check", text: "Full conflicts check against existing clients and instructions before any work begins." },
+  { step: "3", title: "Letter of instruction", text: "Review the instruction letter, raise queries if scope needs clarification, and confirm acceptance in writing." },
   { step: "4", title: "Document review", text: "Receive and review all relevant financial documents. Request additional materials if needed." },
   { step: "5", title: "Analysis", text: "Conduct the forensic analysis, applying appropriate methodology, testing assumptions, identifying any matters outside our expertise." },
   { step: "6", title: "Expert report", text: "Draft, review, and finalise the expert report for applicable federal or state proceedings. Provide preliminary advice note if requested before formal report." },
@@ -55,6 +56,7 @@ export default function HowWeWorkPage() {
         ])}
       />
       <PageHero
+        photo={photoFor("/how-we-work")}
         title="How We Work"
         breadcrumbs={[
           { label: "Home", href: "/" },

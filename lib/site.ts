@@ -5,7 +5,7 @@ export const SITE_NAME = "Lawson Forensic";
 
 export const SITE_EMAIL = "contact@lawsonforensic.com";
 
-/** Geographic scope — surfaced in copy, schema, and FAQs */
+/** Geographic scope: surfaced in copy, schema, and FAQs */
 export const SITE_REGION = "United States";
 
 export const SITE_REGION_NOTE =

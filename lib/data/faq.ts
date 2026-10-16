@@ -31,7 +31,7 @@ export const siteFaqs: FAQ[] = [
   {
     question: "How quickly can you provide an expert report?",
     answer:
-      "Timelines depend on complexity and document volume. We respond to inquiries within one business day. A typical expert report takes four to eight weeks from receipt of documents, though urgent preliminary assessments are available when litigation schedules require it.",
+      "Timelines depend on complexity and document volume. A typical expert report takes four to eight weeks from receipt of documents, though urgent preliminary assessments are available when litigation schedules require it.",
   },
   {
     question:

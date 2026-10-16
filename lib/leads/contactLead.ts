@@ -60,13 +60,13 @@ export function formatContactLeadRow(payload: ContactLeadPayload): string[] {
 
 /**
  * Soft-fail Sheets write. Returns false when not configured or append fails.
- * Never throws — webhook is the primary lead path.
+ * Never throws: webhook is the primary lead path.
  */
 export async function writeContactLeadToSheetSafely(
   payload: ContactLeadPayload
 ): Promise<boolean> {
   if (!isGoogleSheetsConfigured()) {
-    console.warn("[sheets] not configured — skip contact lead");
+    console.warn("[sheets] not configured, skip contact lead");
     return false;
   }
 

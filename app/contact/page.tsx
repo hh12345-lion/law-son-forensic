@@ -5,11 +5,12 @@ import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { ContactForm } from "@/components/ContactForm";
 import { SITE_EMAIL, SITE_REGION_NOTE } from "@/lib/site";
+import { photoFor } from "@/lib/page-photos";
 
 export const metadata = buildMetadata({
   title: "Contact Lawson Forensic | U.S. Forensic Accounting & Expert Witness",
   description:
-    "Contact Lawson Forensic to discuss a forensic accounting instruction. Law firms and businesses across the United States welcome. Response within one business day.",
+    "Contact Lawson Forensic to discuss a forensic accounting instruction. Law firms and businesses across the United States welcome.",
   path: "/contact",
 });
 
@@ -30,8 +31,9 @@ export default function ContactPage() {
         ])}
       />
       <PageHero
+        photo={photoFor("/contact")}
         title="Contact Lawson Forensic"
-        subtitle={`We respond to all enquiries within one business day. ${SITE_REGION_NOTE}`}
+        subtitle={`Tell us about the matter, the court and the timetable. ${SITE_REGION_NOTE}`}
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Contact" },
@@ -55,9 +57,6 @@ export default function ContactPage() {
               >
                 {SITE_EMAIL}
               </a>
-            </p>
-            <p className="mt-2 text-sm text-body">
-              Response within one business day
             </p>
             <h3 className="mt-8 font-serif text-base font-semibold text-ink">
               Why instruct Lawson Forensic

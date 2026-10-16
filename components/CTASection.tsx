@@ -9,14 +9,14 @@ type CTASectionProps = {
 
 export function CTASection({
   title = "Discuss your case",
-  description = "Contact Lawson Forensic to discuss expert witness testimony, forensic accounting, valuations, or damages analysis. We respond within one business day. United States clients only.",
+  description = "Contact Lawson Forensic to discuss expert witness testimony, forensic accounting, valuations, or damages analysis. United States clients only.",
   buttonText = "Request Consultation",
   buttonHref = "/contact",
 }: CTASectionProps) {
   return (
     <section className="relative overflow-hidden bg-ink py-14 sm:py-18 md:py-24">
       <div
-        className="pointer-events-none absolute inset-0 bg-hero-pattern bg-pattern opacity-40"
+        className="pointer-events-none absolute inset-0 bg-hero-pattern opacity-60"
         aria-hidden="true"
       />
       <div className="container-page relative text-center">

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Source_Sans_3, Cormorant_Garamond } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -9,20 +9,30 @@ import { CookiePreferencesModal } from "@/components/cookies/CookiePreferencesMo
 import { SITE_URL, SITE_NAME } from "@/lib/site";
 import { HOME_TITLE } from "@/lib/metadata";
 
-const sourceSans = Source_Sans_3({
-  subsets: ["latin"],
+// Self-hosted latin subsets of the brand typefaces: Cormorant Unicase for headings, Noto Sans for body text.
+const notoSans = localFont({
+  src: [
+    { path: "./fonts/noto-sans.woff2", weight: "100 900", style: "normal" },
+    { path: "./fonts/noto-sans-italic.woff2", weight: "100 900", style: "italic" },
+  ],
   variable: "--font-source",
   display: "swap",
 });
 
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+const cormorant = localFont({
+  src: [
+    { path: "./fonts/cormorant-unicase.woff2", weight: "500", style: "normal" },
+    { path: "./fonts/cormorant-unicase-700.woff2", weight: "700", style: "normal" },
+  ],
   variable: "--font-cormorant",
   display: "swap",
 });
 
+// Every page is rendered on the server for each request.
+export const dynamic = "force-dynamic";
+
 export const viewport: Viewport = {
+  themeColor: "#15212A",
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
@@ -52,7 +62,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-US" className={`${sourceSans.variable} ${cormorant.variable}`}>
+    <html lang="en-US" className={`${notoSans.variable} ${cormorant.variable}`}>
       <body className="flex min-h-screen min-h-[100dvh] flex-col">
         <script
           dangerouslySetInnerHTML={{

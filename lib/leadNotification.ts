@@ -6,7 +6,7 @@ export type LeadPayload = {
   fullName: string;
   email: string;
   phone: string;
-  /** Free-text enquiry body — always sent to n8n as `message`. */
+  /** Free-text enquiry body: always sent to n8n as `message`. */
   message?: string;
 };
 
@@ -36,7 +36,7 @@ export async function notifyLeadWebhook(
 
   if (!webhookUrl) {
     console.warn(
-      "Lead_notification_url not configured — lead logged but not forwarded."
+      "Lead_notification_url not configured: lead logged but not forwarded."
     );
     console.log("Lead submission:", {
       ...payload,

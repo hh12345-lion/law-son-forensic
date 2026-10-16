@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/Button";
 
 export const metadata = buildMetadata({
   title: "Thank You | Lawson Forensic",
-  description: "Your enquiry has been received. Lawson Forensic will respond within one business day.",
+  description: "Your enquiry has been received. Lawson Forensic will be in touch about the next steps.",
   path: "/thank-you",
   noindex: true,
   nofollow: true,
@@ -16,14 +16,11 @@ export default function ThankYouPage() {
     <>
       <section className="bg-ink py-12 sm:py-16 md:py-24">
         <div className="container-page text-center">
-          <p className="font-serif text-sm font-semibold uppercase tracking-wide text-copper">
-            Enquiry received
-          </p>
-          <h1 className="mt-4 font-serif text-2xl font-semibold text-white xs:text-3xl md:text-4xl">
+          <h1 className="font-serif text-2xl font-semibold text-white xs:text-3xl md:text-4xl">
             Thank you
           </h1>
           <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
-            We have received your message and aim to respond within one business day.
+            We have received your message and will be in touch about the next steps.
           </p>
         </div>
       </section>

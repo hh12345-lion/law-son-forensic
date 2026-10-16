@@ -9,15 +9,11 @@ import { FAQAccordion } from "@/components/FAQAccordion";
 import { getPracticeAreaRelatedLinks } from "@/lib/seo/internalLinks";
 import { InternalLinksSection } from "@/components/seo/InternalLinksSection";
 import {
-  practiceAreas,
   getPracticeArea,
 } from "@/lib/data/practice-areas";
+import { photoFor } from "@/lib/page-photos";
 
 type Props = { params: Promise<{ slug: string }> };
-
-export async function generateStaticParams() {
-  return practiceAreas.map((p) => ({ slug: p.slug }));
-}
 
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
@@ -48,6 +44,7 @@ export default async function PracticeAreaPage({ params }: Props) {
         ])}
       />
       <PageHero
+        photo={photoFor(`/practice-areas/${slug}`)}
         title={`${area.h1}`}
         subtitle={area.shortDescription}
         breadcrumbs={[

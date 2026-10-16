@@ -6,6 +6,7 @@ import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { CTASection } from "@/components/CTASection";
 import { practiceAreas } from "@/lib/data/practice-areas";
+import { photoFor } from "@/lib/page-photos";
 
 export const metadata = buildMetadata({
   title: "Practice Areas | Lawson Forensic U.S. Forensic Accounting",
@@ -24,6 +25,7 @@ export default function PracticeAreasPage() {
         ])}
       />
       <PageHero
+        photo={photoFor("/practice-areas")}
         title="Practice Areas"
         breadcrumbs={[
           { label: "Home", href: "/" },

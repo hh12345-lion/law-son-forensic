@@ -7,6 +7,12 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const nextConfig: NextConfig = {
   outputFileTracingRoot: path.join(__dirname),
+  // Blog posts are read from disk at request time, so ship the markdown with the server bundle.
+  outputFileTracingIncludes: {
+    "/blog": ["./content/blog/**/*"],
+    "/blog/[slug]": ["./content/blog/**/*"],
+    "/sitemap.xml": ["./content/blog/**/*"],
+  },
   images: {
     formats: ["image/avif", "image/webp"],
   },

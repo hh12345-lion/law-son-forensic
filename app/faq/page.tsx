@@ -8,6 +8,7 @@ import { FAQAccordion } from "@/components/FAQAccordion";
 import { getFaqRelatedLinks } from "@/lib/seo/internalLinks";
 import { InternalLinksSection } from "@/components/seo/InternalLinksSection";
 import { siteFaqs } from "@/lib/data/faq";
+import { photoFor } from "@/lib/page-photos";
 
 export const metadata = buildMetadata({
   title: "FAQ | Lawson Forensic Forensic Accounting USA",
@@ -27,6 +28,7 @@ export default function FAQPage() {
         ])}
       />
       <PageHero
+        photo={photoFor("/faq")}
         title="Frequently Asked Questions"
         breadcrumbs={[
           { label: "Home", href: "/" },

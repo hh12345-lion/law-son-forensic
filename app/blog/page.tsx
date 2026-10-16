@@ -8,6 +8,7 @@ import { getAllBlogPosts } from "@/lib/blog";
 import { buildMetadata } from "@/lib/metadata";
 import { breadcrumbSchema } from "@/lib/schema";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
+import { photoFor } from "@/lib/page-photos";
 
 export const metadata = buildMetadata({
   title: "Blog | Lawson Forensic Valuation & Forensic Accounting Insights",
@@ -46,6 +47,7 @@ export default function BlogIndexPage() {
         ]}
       />
       <PageHero
+        photo={photoFor("/blog")}
         title="Blog"
         subtitle="Practitioner-facing articles on business valuation, shareholder disputes, and forensic accounting evidence."
         breadcrumbs={[

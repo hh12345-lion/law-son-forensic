@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import type { Photo } from "@/lib/photos";
 
 type Breadcrumb = { label: string; href?: string };
 
@@ -8,92 +10,51 @@ type PageHeroProps = {
   breadcrumbs?: Breadcrumb[];
   children?: React.ReactNode;
   compact?: boolean;
+  photo?: Photo;
 };
 
-export function PageHero({
-  title,
-  subtitle,
-  breadcrumbs,
-  children,
-  compact = false,
-}: PageHeroProps) {
+/** Title first; breadcrumbs follow the intro. The photo carries the fingerprint curve of the monogram. */
+export function PageHero({ title, subtitle, breadcrumbs, children, compact = false, photo }: PageHeroProps) {
   return (
-    <section
-      className={`relative overflow-hidden bg-ink ${compact ? "py-10 sm:py-12" : "py-14 sm:py-20 md:py-28"}`}
-    >
-      <div
-        className="pointer-events-none absolute inset-0 bg-hero-pattern bg-pattern opacity-60"
-        aria-hidden="true"
-      />
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-copper" aria-hidden="true" />
-
+    <section className={`relative overflow-hidden bg-stone-dark ${compact ? "py-10 sm:py-12" : "py-12 sm:py-16"}`}>
+      <span aria-hidden="true" className="absolute inset-y-0 left-0 hidden w-3 bg-ink lg:block" />
+      <span aria-hidden="true" className="absolute inset-y-0 left-3 hidden w-1 bg-copper lg:block" />
       <div className="container-page relative">
-        <div className="grid items-center gap-8 lg:grid-cols-12 lg:gap-12">
-          <div className="lg:col-span-8">
+        <div className={`grid items-center gap-12 ${photo ? "lg:grid-cols-12 lg:gap-16" : ""}`}>
+          <div className={photo ? "min-w-0 lg:col-span-7" : "max-w-3xl"}>
+            <h1 className="break-words font-serif text-[2rem] font-bold leading-[1.08] text-ink sm:text-4xl lg:text-[3.25rem]">
+              {title}
+            </h1>
+            {subtitle && <p className="mt-5 max-w-2xl text-lg leading-relaxed text-body">{subtitle}</p>}
+            {children && <div className="hero-cta-group">{children}</div>}
             {breadcrumbs && breadcrumbs.length > 0 && (
-              <nav aria-label="Breadcrumb" className="mb-4">
-                <ol className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-white/50 sm:text-sm">
+              <nav aria-label="Breadcrumb" className="mt-8 border-t border-border pt-4">
+                <ol className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-slate-muted sm:text-sm">
                   {breadcrumbs.map((crumb, i) => (
-                    <li
-                      key={`${crumb.label}-${i}`}
-                      className="flex max-w-full items-center gap-2"
-                    >
-                      {i > 0 && (
-                        <span aria-hidden="true" className="shrink-0">
-                          /
-                        </span>
-                      )}
+                    <li key={`${crumb.label}-${i}`} className="flex max-w-full items-center gap-2">
+                      {i > 0 && <span aria-hidden="true" className="h-1 w-1 shrink-0 bg-copper" />}
                       {crumb.href ? (
-                        <Link
-                          href={crumb.href}
-                          className="break-words hover:text-copper focus:outline-none focus-visible:underline"
-                        >
+                        <Link href={crumb.href} className="break-words hover:text-copper focus:outline-none focus-visible:underline">
                           {crumb.label}
                         </Link>
                       ) : (
-                        <span className="break-words text-white/70">{crumb.label}</span>
+                        <span className="break-words font-semibold text-ink" aria-current="page">
+                          {crumb.label}
+                        </span>
                       )}
                     </li>
                   ))}
                 </ol>
               </nav>
             )}
-            <div className="accent-bar mb-5" />
-            <h1 className="break-words font-serif text-[1.75rem] font-bold leading-tight text-white xs:text-3xl sm:text-4xl lg:text-5xl">
-              {title}
-            </h1>
-            {subtitle && (
-              <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/75 sm:text-lg">
-                {subtitle}
-              </p>
-            )}
-            {children && <div className="hero-cta-group">{children}</div>}
           </div>
-
-          {!compact && (
-            <div className="hidden lg:col-span-4 lg:block">
-              <div className="rounded-card border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
-                <p className="section-label !text-copper/80">Practice Focus</p>
-                <ul className="mt-4 space-y-3 text-sm text-white/80">
-                  <li className="flex items-start gap-2">
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-copper" />
-                    Expert witness reports &amp; testimony
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-copper" />
-                    Forensic accounting &amp; fraud analysis
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-copper" />
-                    Business valuations &amp; shareholder disputes
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-copper" />
-                    Loss &amp; damages quantification
-                  </li>
-                </ul>
+          {photo && (
+            <figure className="relative lg:col-span-5">
+              <span aria-hidden="true" className="print-frame absolute -right-3 -top-3 bottom-6 left-6 border-2 border-copper/60" />
+              <div className="print-frame relative aspect-[5/4] overflow-hidden bg-mist lg:aspect-[4/5]">
+                <Image src={photo.src} alt={photo.alt} fill priority sizes="(min-width: 1024px) 38vw, 100vw" className="object-cover" />
               </div>
-            </div>
+            </figure>
           )}
         </div>
       </div>

@@ -4,6 +4,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { PageHero } from "@/components/PageHero";
 import { Section, Prose } from "@/components/Section";
 import { CTASection } from "@/components/CTASection";
+import { photoFor } from "@/lib/page-photos";
 
 export const metadata = buildMetadata({
   title: "Qualifications & Accreditations | Lawson Forensic USA",
@@ -25,6 +26,7 @@ export default function QualificationsPage() {
         ])}
       />
       <PageHero
+        photo={photoFor("/qualifications-accreditations")}
         title="Qualifications & Accreditations"
         breadcrumbs={[
           { label: "Home", href: "/" },

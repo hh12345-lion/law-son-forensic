@@ -5,11 +5,12 @@ import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { CTASection } from "@/components/CTASection";
 import { caseStudies } from "@/lib/data/case-studies";
+import { photoFor } from "@/lib/page-photos";
 
 export const metadata = buildMetadata({
-  title: "Case Studies | Lawson Forensic Forensic Accounting USA",
+  title: "Example Engagements | Lawson Forensic Forensic Accounting USA",
   description:
-    "Anonymised case studies from Lawson Forensic's U.S. forensic accounting practice, demonstrating expertise across commercial disputes, shareholder claims, fraud investigations, and marital dissolution.",
+    "Illustrative examples of how forensic accounting engagements are approached across commercial disputes, shareholder claims, fraud investigations, and marital dissolution.",
   path: "/case-studies",
 });
 
@@ -19,24 +20,24 @@ export default function CaseStudiesPage() {
       <JsonLd
         data={breadcrumbSchema([
           { name: "Home", path: "/" },
-          { name: "Case Studies", path: "/case-studies" },
+          { name: "Example Engagements", path: "/case-studies" },
         ])}
       />
       <PageHero
-        title="Case Studies"
-        subtitle="Anonymised examples from our practice. All identifying details have been changed or removed to protect confidentiality."
+        photo={photoFor("/case-studies")}
+        title="Example Engagements"
+        subtitle="Illustrative scenarios showing how typical forensic accounting instructions are scoped and approached."
         breadcrumbs={[
           { label: "Home", href: "/" },
-          { label: "Case Studies" },
+          { label: "Example Engagements" },
         ]}
       />
 
       <Section>
         <p className="max-w-3xl text-lg leading-relaxed text-body">
-          The following case studies are drawn from Lawson Forensic&apos;s practice.
-          All identifying details have been changed or removed to protect client and
-          party confidentiality. They are illustrative of the types of matters we
-          handle and the approach we bring to each engagement.
+          The scenarios below are illustrative. They describe the kinds of matter a forensic
+          accountant is asked to address and how the work is typically approached; they are
+          not accounts of specific past engagements or their results.
         </p>
 
         <div className="mt-12 space-y-12">
@@ -51,27 +52,21 @@ export default function CaseStudiesPage() {
               <div className="mt-6 space-y-4 text-body leading-relaxed">
                 <div>
                   <h3 className="text-sm font-semibold uppercase tracking-wide text-copper">
-                    Background
+                    Scenario
                   </h3>
                   <p className="mt-1">{study.background}</p>
                 </div>
                 <div>
                   <h3 className="text-sm font-semibold uppercase tracking-wide text-copper">
-                    Instruction
+                    Typical instruction
                   </h3>
                   <p className="mt-1">{study.instruction}</p>
                 </div>
                 <div>
                   <h3 className="text-sm font-semibold uppercase tracking-wide text-copper">
-                    Approach
+                    How the work is approached
                   </h3>
                   <p className="mt-1">{study.approach}</p>
-                </div>
-                <div>
-                  <h3 className="text-sm font-semibold uppercase tracking-wide text-copper">
-                    Outcome
-                  </h3>
-                  <p className="mt-1">{study.outcome}</p>
                 </div>
               </div>
             </article>

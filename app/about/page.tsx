@@ -6,6 +6,7 @@ import { PageHero } from "@/components/PageHero";
 import { Section, Prose } from "@/components/Section";
 import { CTASection } from "@/components/CTASection";
 import { SITE_REGION, SITE_REGION_NOTE } from "@/lib/site";
+import { photoFor } from "@/lib/page-photos";
 
 export const metadata = buildMetadata({
   title: "About Lawson Forensic | U.S. Forensic Accounting Practice",
@@ -24,6 +25,7 @@ export default function AboutPage() {
         ])}
       />
       <PageHero
+        photo={photoFor("/about")}
         title="About Lawson Forensic"
         subtitle={SITE_REGION_NOTE}
         breadcrumbs={[

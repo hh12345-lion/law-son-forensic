@@ -7,10 +7,7 @@ export default function NotFound() {
     <>
       <section className="bg-ink py-12 sm:py-16 md:py-24">
         <div className="container-page text-center">
-          <p className="font-serif text-5xl font-semibold text-copper xs:text-6xl md:text-8xl">
-            404
-          </p>
-          <h1 className="mt-4 font-serif text-xl font-semibold text-white xs:text-2xl md:text-3xl">
+          <h1 className="font-serif text-xl font-semibold text-white xs:text-2xl md:text-3xl">
             Page not found
           </h1>
           <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-white/80 sm:text-lg">
@@ -20,7 +17,7 @@ export default function NotFound() {
             <Button
               href="/"
               variant="primary"
-              className="w-full max-w-sm border-copper bg-copper text-ink hover:bg-white sm:w-auto"
+              className="w-full max-w-sm sm:w-auto"
             >
               Return to Homepage
             </Button>

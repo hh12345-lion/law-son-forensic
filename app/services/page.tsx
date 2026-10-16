@@ -6,6 +6,7 @@ import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/Section";
 import { CTASection } from "@/components/CTASection";
 import { services, servicePath } from "@/lib/data/services";
+import { photoFor } from "@/lib/page-photos";
 
 export const metadata = buildMetadata({
   title: "Forensic Accounting Services | Lawson Forensic USA",
@@ -25,6 +26,7 @@ export default function ServicesPage() {
         ])}
       />
       <PageHero
+        photo={photoFor("/services")}
         title="Forensic Accounting Services"
         subtitle="Senior-led forensic accounting and expert witness services for law firms, businesses, and insurers across the United States."
         breadcrumbs={[

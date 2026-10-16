@@ -14,7 +14,7 @@ function extractLocs(xml: string): string[] {
 function main() {
   const sitemapPath = join(process.cwd(), "public", "sitemap.xml");
   if (!existsSync(sitemapPath)) {
-    console.error("Missing public/sitemap.xml — run npm run seo:generate");
+    console.error("Missing public/sitemap.xml: run npm run seo:generate");
     process.exit(1);
   }
 

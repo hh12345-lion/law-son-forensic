@@ -59,6 +59,47 @@
   .section-label {
     @apply text-xs font-semibold uppercase tracking-[0.15em] text-sage;
   }
+
+  /* Photo frames from the monogram: the column on the left edge and the rounded fingerprint on the right. */
+  .print-frame {
+    border-top-right-radius: 48% 38%;
+    border-bottom-right-radius: 34% 28%;
+  }
+
+  .print-frame-sm {
+    border-top-right-radius: 40% 30%;
+  }
+
+  /* Desktop dropdowns open on hover or keyboard focus without client script. */
+  .nav-item .nav-panel {
+    display: none;
+  }
+
+  .nav-item:hover .nav-panel,
+  .nav-item:focus-within .nav-panel {
+    display: block;
+  }
+
+  details.fold > summary {
+    list-style: none;
+    cursor: pointer;
+  }
+
+  details.fold > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  details.fold[open] .fold-sign {
+    transform: rotate(45deg);
+  }
+
+  #mobile-nav-toggle:checked ~ .header-bar .icon-open {
+    display: none;
+  }
+
+  #mobile-nav-toggle:checked ~ .header-bar .icon-close {
+    display: block;
+  }
 }
 
 .prose-content a {

@@ -18,22 +18,24 @@ const config: Config = {
     },
     extend: {
       colors: {
-        ink: "#152028",
-        copper: "#C67B4E",
-        sage: "#5A7D6C",
-        stone: "#F7F4EF",
-        "stone-dark": "#EDE9E2",
-        border: "#D4CFC7",
-        heading: "#152028",
-        body: "#3D4F56",
-        "slate-muted": "#4A5F68",
+        ink: "#15212A",
+        copper: "#D27644",
+        "copper-deep": "#B35F31",
+        sage: "#4F7E6B",
+        stone: "#F6F3EE",
+        "stone-dark": "#EEE9E1",
+        mist: "#D6D6D6",
+        border: "#D6D6D6",
+        heading: "#15212A",
+        body: "#37444D",
+        "slate-muted": "#4A5862",
       },
       fontFamily: {
         serif: ["var(--font-cormorant)", "Georgia", "serif"],
         sans: ["var(--font-source)", "system-ui", "sans-serif"],
       },
       borderRadius: {
-        card: "10px",
+        card: "0px",
         pill: "9999px",
       },
       boxShadow: {
@@ -48,7 +50,7 @@ const config: Config = {
       },
       backgroundImage: {
         "hero-pattern":
-          "linear-gradient(135deg, rgba(198, 123, 78, 0.08) 25%, transparent 25%), linear-gradient(225deg, rgba(198, 123, 78, 0.08) 25%, transparent 25%), linear-gradient(45deg, rgba(198, 123, 78, 0.08) 25%, transparent 25%), linear-gradient(315deg, rgba(198, 123, 78, 0.08) 25%, transparent 25%)",
+          "repeating-radial-gradient(circle at 100% 50%, rgba(210, 118, 68, 0.10) 0 2px, transparent 2px 22px)",
       },
       backgroundSize: {
         pattern: "24px 24px",

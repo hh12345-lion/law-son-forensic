@@ -97,14 +97,14 @@ export async function POST(request: Request) {
         });
         webhookOk = result.ok;
         if (!webhookOk) {
-          console.error("[submit-lead] webhook failed — continuing with Sheets");
+          console.error("[submit-lead] webhook failed, continuing with Sheets");
         }
       } catch (error) {
         console.error("[submit-lead] webhook error:", error);
       }
     } else {
       console.warn(
-        "[submit-lead] Lead_notification_url missing — continuing with Sheets fallback"
+        "[submit-lead] Lead_notification_url missing, continuing with Sheets fallback"
       );
     }
 

@@ -11,14 +11,11 @@ import { Section } from "@/components/Section";
 import { CTASection } from "@/components/CTASection";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { ServiceContent } from "@/components/ServiceContent";
-import { services, getService, servicePath } from "@/lib/data/services";
+import { getService, servicePath } from "@/lib/data/services";
 import { siteFaqs } from "@/lib/data/faq";
+import { photoFor } from "@/lib/page-photos";
 
 type Props = { params: Promise<{ slug: string }> };
-
-export async function generateStaticParams() {
-  return services.map((s) => ({ slug: s.id }));
-}
 
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
@@ -53,6 +50,7 @@ export default async function ServicePage({ params }: Props) {
         ]}
       />
       <PageHero
+        photo={photoFor(`/services/${slug}`)}
         title={service.title}
         subtitle={service.description}
         breadcrumbs={[

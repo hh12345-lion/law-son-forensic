@@ -14,6 +14,8 @@ import {
   practiceFocusAreas,
 } from "@/lib/data/core-capabilities";
 import { SITE_REGION, SITE_REGION_NOTE } from "@/lib/site";
+import Image from "next/image";
+import { photos } from "@/lib/photos";
 
 export const metadata = buildMetadata({
   title: HOME_TITLE,
@@ -25,7 +27,7 @@ export const metadata = buildMetadata({
 const pillars = [
   {
     title: "Senior-led",
-    text: "Every engagement is led by a senior forensic accountant with direct trial and deposition experience—not delegated to junior staff after the initial consultation.",
+    text: "Every engagement is led by a senior forensic accountant with direct trial and deposition experience, not delegated to junior staff after the initial consultation.",
   },
   {
     title: "Court-ready",
@@ -33,7 +35,7 @@ const pillars = [
   },
   {
     title: "Responsive",
-    text: "Litigation runs on deadlines. We respond within one business day and provide urgent preliminary assessments when motions, injunctions, or discovery schedules require it.",
+    text: "Litigation runs on deadlines. Tell us the motion, injunction, or discovery dates and we plan the work, including urgent preliminary assessments, around them.",
   },
 ];
 
@@ -46,12 +48,13 @@ export default function HomePage() {
     <>
       <JsonLd data={homepageSchema()} />
       <PageHero
+        photo={photos.thurgoodColumns}
         title="Forensic Accounting & Expert Witness Services"
-        subtitle="Lawson Forensic is an independent U.S. practice providing expert witness testimony, forensic accounting, business valuations, shareholder dispute analysis, and loss and damages quantification—with senior accountant involvement from retention through trial."
+        subtitle="Lawson Forensic is an independent U.S. practice providing expert witness testimony, forensic accounting, business valuations, shareholder dispute analysis, and loss and damages quantification, with senior accountant involvement from retention through trial."
       >
         <h2 className="sr-only">Expert Witness &amp; Forensic Accounting Services</h2>
         <Button href="/contact">Request Consultation</Button>
-        <Button href="/services" variant="secondary">
+        <Button href="/services" variant="outline">
           View Services
         </Button>
       </PageHero>
@@ -83,6 +86,9 @@ export default function HomePage() {
               Independent Forensic Accounting for Litigation
             </h2>
             <div className="accent-bar mt-5" />
+            <div className="print-frame relative mt-8 aspect-[4/3] overflow-hidden bg-mist">
+              <Image src={photos.nyseFacade.src} alt={photos.nyseFacade.alt} fill sizes="(min-width: 1024px) 34vw, 100vw" className="object-cover" />
+            </div>
           </div>
           <div className="lg:col-span-7">
             <p className="rounded-card border border-copper/30 bg-copper/5 px-4 py-3 text-sm font-medium text-ink sm:text-base">
@@ -147,7 +153,7 @@ export default function HomePage() {
                 {item.description}
               </p>
               <span className="mt-4 inline-block text-sm font-semibold text-copper">
-                Learn more &rarr;
+                Learn more
               </span>
             </Link>
           ))}
@@ -169,6 +175,9 @@ export default function HomePage() {
       <Section alt>
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
           <div>
+            <div className="print-frame relative mb-8 aspect-[16/10] overflow-hidden bg-mist">
+              <Image src={photos.supremeColumns.src} alt={photos.supremeColumns.alt} fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" />
+            </div>
             <p className="section-label">Why Retain Us</p>
             <h2 className="mt-2 font-serif text-2xl font-bold text-ink sm:text-3xl">
               Why Law Firms Retain Lawson Forensic
@@ -227,7 +236,7 @@ export default function HomePage() {
                 <p className="mt-1 text-sm text-body">{service.description}</p>
               </div>
               <span className="shrink-0 text-sm font-semibold text-copper opacity-0 transition group-hover:opacity-100 sm:opacity-100">
-                View &rarr;
+                View
               </span>
             </Link>
           ))}
@@ -280,19 +289,20 @@ export default function HomePage() {
         />
       </Section>
 
-      <Section alt className="!py-16">
-        <blockquote className="mx-auto max-w-3xl text-center">
+      <section className="relative overflow-hidden bg-ink py-16 sm:py-20">
+        <Image src={photos.chicagoBoardOfTrade.src} alt="" fill sizes="100vw" className="object-cover opacity-25" />
+        <blockquote className="container-page relative mx-auto max-w-3xl text-center">
           <div className="accent-bar mx-auto mb-6" />
-          <p className="font-serif text-xl italic leading-relaxed text-ink sm:text-2xl md:text-3xl">
+          <p className="font-serif text-xl leading-relaxed text-white sm:text-2xl md:text-3xl">
             &ldquo;Forensic accounting is as much about communication as calculation.
             The best expert report means nothing if it cannot be understood by
             the judge or jury who reads it.&rdquo;
           </p>
-          <footer className="mt-6 text-sm font-semibold uppercase tracking-[0.1em] text-sage">
+          <footer className="mt-6 text-sm font-semibold uppercase tracking-[0.1em] text-copper">
             Lawson Forensic
           </footer>
         </blockquote>
-      </Section>
+      </section>
 
       <CTASection />
     </>

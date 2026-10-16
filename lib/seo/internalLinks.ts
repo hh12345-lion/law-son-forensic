@@ -44,7 +44,7 @@ export function getPracticeAreaRelatedLinks(slug: string): {
       return { href, label: a?.title ?? href };
     }),
     other: [
-      { href: "/case-studies", label: "Case studies" },
+      { href: "/case-studies", label: "Example engagements" },
       { href: "/how-we-work", label: "How we work" },
       { href: "/contact", label: "Contact us" },
     ],
